@@ -21,12 +21,18 @@ a:hover {
   text-decoration: underline;
 }
 
-.icons {
+.icons,
+.note_one,
+.note_two {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   list-style-type: none;
+  cursor: pointer;
+}
+
+.icons {
   width: 100px;
   float: left;
   position: fixed;
@@ -61,7 +67,7 @@ a:hover {
 .contact_me {
   height: 32px;
   width: 32px;
-  background-image: url("/src/icons/network.png");
+  background-image: url("src/icons/network.png");
   margin: auto;
 }
 
@@ -74,15 +80,39 @@ a:hover {
 .linkedin {
   height: 32px;
   width: 32px;
-  background-image: url("/src/icons/ie.png");
+  background-image: url("src/icons/ie.png");
   margin: auto;
 }
 
 .github {
   height: 32px;
   width: 32px;
-  background-image: url("/src/icons/cmd.png");
+  background-image: url("src/icons/cmd.png");
   margin: auto;
+}
+
+.note_one,
+.note_two {
+  width: 70px;
+}
+
+.note_one {
+  position: fixed;
+  right: 10%;
+  top: 50%;
+}
+
+.note_two {
+  position: fixed;
+  right: 15%;
+  top: 40%;
+}
+
+.notepad_one,
+.notepad_two {
+  height: 32px;
+  width: 32px;
+  background-image: url("src/icons/notepad.png");
 }
 
 .start_bar .start_button .logo {
@@ -185,17 +215,19 @@ img.full_image {
 }
 
 .window,
-.window-one {
+.window_one {
   width: 480px;
   max-width: 480px;
   position: fixed;
   top: 10%;
+  cursor: default;
 }
 
-.window-two {
+.window_two {
   position: fixed;
   top: 45%;
   left: 14.5%;
+  cursor: default;
 }
 
 .window .top {
@@ -219,6 +251,24 @@ img.full_image {
 
 .window .top a:hover {
   text-decoration: underline;
+}
+
+.window > .x {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 1.5%;
+  right: 1.5%;
+  cursor: pointer;
+}
+
+.description > .x {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 2.5%;
+  right: 2.5%;
+  cursor: pointer;
 }
 
 .window .middle,
@@ -372,4 +422,8 @@ div.tags {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  display: none;
 }
