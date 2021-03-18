@@ -154,6 +154,7 @@ a:hover {
   width: 75px;
   margin-top: 7px;
   background-position: -231px -158px;
+  cursor: pointer;
 }
 
 .description .bottom {
@@ -255,7 +256,7 @@ img.full_image {
 
 .window > .x {
   height: 16px;
-  width: 16px;
+  width: 50px;
   position: absolute;
   top: 1.5%;
   right: 1.5%;

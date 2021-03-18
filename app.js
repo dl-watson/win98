@@ -32,7 +32,12 @@ $(document).ready(() => {
     $(ok).parent().parent().fadeOut();
   });
 
-  $(start_button).click(() => {
+  $(start_button).click((e) => {
+    $(start_button).toggleClass("sb_click");
+    $(start_menu).slideToggle();
+  });
+
+  $(start_menu).on("mouseleave", () => {
     $(start_button).toggleClass("sb_click");
     $(start_menu).slideToggle();
   });
