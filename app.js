@@ -57,12 +57,16 @@ $(document).ready(() => {
   $(note_one).click(() => {
     if ($(window_one).hasClass("hidden")) {
       $(window_one).toggleClass("hidden");
+
+      helpCursor();
     }
   });
 
   $(note_two).click(() => {
     if ($(window_two).hasClass("hidden")) {
       $(window_two).toggleClass("hidden");
+
+      helpCursor();
     }
   });
 
@@ -92,3 +96,10 @@ $(document).ready(() => {
   window.setInterval(updateClock, 6000);
   updateClock();
 });
+
+const helpCursor = () => {
+  $("*").toggleClass("loading");
+  setTimeout(() => {
+    $("*").toggleClass("loading");
+  }, 100);
+};

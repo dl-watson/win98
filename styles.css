@@ -428,3 +428,7 @@ div.tags {
 .hidden {
   display: none;
 }
+
+.loading {
+  cursor: url("src/w98busy.cur"), help;
+}
