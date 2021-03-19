@@ -282,6 +282,15 @@ div.tags {
 
 .middle .caption {
   margin-top: 5px;
+  display: flex;
+}
+
+.rc-scout__text {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  font-family: inherit !important;
 }
 
 .window .bottom {
