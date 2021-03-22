@@ -285,15 +285,19 @@ div.tags {
   display: flex;
 }
 
-.wrapper,
+.wrapper {
+  display: flex;
+}
+
 .description .middle,
-.rc-scout,
-.rc-scout__text {
+.rc-scout .rc-scout__text {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
   font-family: inherit !important;
+  flex-direction: column !important;
+  margin: auto !important;
 }
 
 .window .bottom {
@@ -311,10 +315,6 @@ div.tags {
 .description .middle {
   background: url("//static.tumblr.com/fpdiq1j/leqm4f39j/description_middle.png")
     repeat-y;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   padding: 5px;
   max-width: 190px;
   font-size: 11px;
