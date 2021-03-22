@@ -90,7 +90,7 @@ export const toggleStart = () => {
 };
 
 export const closePopup = () => {
-  $(ok).on("click", () => {
+  $(ok).on("click touchstart", () => {
     $(ok).parent().parent().fadeOut();
   });
 };
