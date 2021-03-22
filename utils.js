@@ -16,14 +16,7 @@ const linkedin = ".pages";
 const github = ".code";
 const twitter = ".recycle";
 
-export const helpCursor = () => {
-  $("*").toggleClass("loading");
-  setTimeout(() => {
-    $("*").toggleClass("loading");
-  }, 100);
-};
-
-export const makeDraggable = (
+export const elemArray = [
   window_one,
   window_two,
   note_one,
@@ -32,57 +25,26 @@ export const makeDraggable = (
   computer,
   linkedin,
   github,
-  twitter
-) => {
-  const elemArray = [
-    window_one,
-    window_two,
-    note_one,
-    note_two,
-    explorer,
-    computer,
-    linkedin,
-    github,
-    twitter,
-  ];
-  return elemArray.map((elem) => $(elem).pep());
+  twitter,
+];
+
+const draggableOptions = {
+  cssEaseDuration: 0,
+  deferPlacement: true,
+  place: false,
+  elementsWithInteraction: elemArray.map((elem) => $(elem)),
+  allowDragEventPropagation: false,
 };
 
-console.log(
-  makeDraggable(
-    window_one,
-    window_two,
-    note_one,
-    note_two,
-    explorer,
-    computer,
-    linkedin,
-    github,
-    twitter
-  )
-);
+export const helpCursor = () => {
+  $("*").toggleClass("loading");
+  setTimeout(() => {
+    $("*").toggleClass("loading");
+  }, 100);
+};
 
-export const updateClock = () => {
-  const date = new Date();
-  let mins = date.getMinutes();
-  let hrs = date.getHours();
-  let ext = "AM";
-
-  if (hrs >= 12) {
-    ext = "PM";
-    if (hrs !== 12) {
-      hrs = hrs - parseInt(12);
-    }
-  } else if (hrs < 10) {
-    ext = "AM";
-    hrs = "0" + hrs;
-  }
-
-  if (mins < 10) {
-    mins = "0" + mins;
-  }
-  const currentTime = hrs + ":" + mins + " " + ext;
-  $(clock).html(currentTime);
+export const makeDraggable = (elemArray) => {
+  return elemArray.map((elem) => $(elem).pep(draggableOptions));
 };
 
 export const toggleHidden = () => {
@@ -131,4 +93,27 @@ export const closePopup = () => {
   $(ok).click(() => {
     $(ok).parent().parent().fadeOut();
   });
+};
+
+export const updateClock = () => {
+  const date = new Date();
+  let mins = date.getMinutes();
+  let hrs = date.getHours();
+  let ext = "AM";
+
+  if (hrs >= 12) {
+    ext = "PM";
+    if (hrs !== 12) {
+      hrs = hrs - parseInt(12);
+    }
+  } else if (hrs < 10) {
+    ext = "AM";
+    hrs = "0" + hrs;
+  }
+
+  if (mins < 10) {
+    mins = "0" + mins;
+  }
+  const currentTime = hrs + ":" + mins + " " + ext;
+  $(clock).html(currentTime);
 };

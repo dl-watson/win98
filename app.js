@@ -4,10 +4,11 @@ import {
   toggleStart,
   updateClock,
   closePopup,
+  elemArray,
 } from "./utils.js";
 
 $(document).ready(() => {
-  makeDraggable();
+  makeDraggable(elemArray);
 
   closePopup();
 
