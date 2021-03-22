@@ -442,3 +442,12 @@ div.tags {
 .no_click {
   pointer-events: none;
 }
+
+.ui-loader,
+.ui-icon-loading {
+  display: none;
+}
+
+.ui-mobile-viewport {
+  border: none;
+}
