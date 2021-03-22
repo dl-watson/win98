@@ -287,15 +287,14 @@ div.tags {
   display: flex;
 }
 
-.desc_contents .middle,
+.description .middle,
 .rc-scout .rc-scout__text {
   display: flex !important;
-  flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
-  font-family: inherit !important;
   flex-direction: column !important;
-  margin: auto !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .window .bottom {
