@@ -53,25 +53,25 @@ export const makeDraggable = (elemArray) => {
 export const toggleHidden = () => {
   $(window_one_x).bind("touchmove", (e) => {
     e.preventDefault();
+    $(window_one).unbind("touchmove");
   });
   $(window_one_x).on("click touchstart", () => {
-    $(window_one).unbind("touchmove");
     $(window_one).toggleClass("hidden");
   });
 
   $(window_two_x).bind("touchmove", (e) => {
     e.preventDefault();
+    $(window_two).unbind("touchmove");
   });
   $(window_two_x).on("click touchstart", () => {
-    $(window_two).unbind("touchmove");
     $(window_two).toggleClass("hidden");
   });
 
   $(explorer).bind("touchmove", (e) => {
     e.preventDefault();
+    $(explorer).unbind("touchmove");
   });
   $(explorer_x).on("click touchstart", () => {
-    $(explorer).unbind("touchmove");
     $(explorer).toggleClass("hidden");
   });
 
