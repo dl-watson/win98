@@ -80,7 +80,7 @@ export const toggleHidden = () => {
   });
   $(note_one).on("click touchstart", () => {
     if ($(window_one).hasClass("hidden")) {
-      $(window_one).unbind("touchmove");
+      $(note_one).unbind("touchmove");
       $(window_one).toggleClass("hidden");
 
       helpCursor();
@@ -91,7 +91,7 @@ export const toggleHidden = () => {
     e.preventDefault();
   });
   $(note_two).on("click touchstart", () => {
-    $(window_two).unbind("touchmove");
+    $(note_two).unbind("touchmove");
     if ($(window_two).hasClass("hidden")) {
       $(window_two).toggleClass("hidden");
 
