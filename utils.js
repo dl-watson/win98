@@ -33,7 +33,6 @@ const draggableOptions = {
   deferPlacement: true,
   place: false,
   elementsWithInteraction: elemArray.map((elem) => $(elem)),
-  allowDragEventPropagation: false,
 };
 
 export const helpCursor = () => {
@@ -47,20 +46,21 @@ export const makeDraggable = (elemArray) => {
   return elemArray.map((elem) => $(elem).pep(draggableOptions));
 };
 
+// dragging a note icon immediately opens the note on mobile
 export const toggleHidden = () => {
-  $(window_one_x).on("click touchstart", () => {
+  $(window_one_x).on("click touchend", () => {
     $(window_one).toggleClass("hidden");
   });
 
-  $(window_two_x).on("click touchstart", () => {
+  $(window_two_x).on("click touchend", () => {
     $(window_two).toggleClass("hidden");
   });
 
-  $(explorer_x).on("click touchstart", () => {
+  $(explorer_x).on("click touchend", () => {
     $(explorer).toggleClass("hidden");
   });
 
-  $(note_one).on("click touchstart", () => {
+  $(note_one).on("click touchend", () => {
     if ($(window_one).hasClass("hidden")) {
       $(window_one).toggleClass("hidden");
 
@@ -68,7 +68,7 @@ export const toggleHidden = () => {
     }
   });
 
-  $(note_two).on("click touchstart", () => {
+  $(note_two).on("click touchend", () => {
     if ($(window_two).hasClass("hidden")) {
       $(window_two).toggleClass("hidden");
 
@@ -77,18 +77,21 @@ export const toggleHidden = () => {
   });
 };
 
+// currently working on mobile
 export const toggleStart = () => {
   $(start_button).on("click", (e) => {
     $(start_button).toggleClass("sb_click");
     $(start_menu).slideToggle();
   });
 
+  // not an option on mobile, user will need to click the start button again
   $(start_menu).on("mouseleave", () => {
     $(start_button).toggleClass("sb_click");
     $(start_menu).slideToggle();
   });
 };
 
+// currently not working on mobile
 export const closePopup = () => {
   $(ok).on("click touchstart", () => {
     $(ok).parent().parent().fadeOut();
