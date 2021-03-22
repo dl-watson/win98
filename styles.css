@@ -284,9 +284,10 @@ div.tags {
   display: flex;
 }
 
-.middle .rc-scout {
+.wrapper,
+.descriptionm .middle,
+.rc-scout {
   display: flex !important;
-  justify-content: center;
 }
 
 .rc-scout__text {
@@ -354,10 +355,15 @@ div.tags {
   height: 18px;
   width: 54px;
   margin: 2px;
+  cursor: pointer;
 }
 
-.start_button {
-  cursor: pointer;
+.start_button > .logo {
+  margin: 1px;
+}
+
+.start_button > .text {
+  margin-right: 1px;
 }
 
 .sb_click {
@@ -372,12 +378,6 @@ div.tags {
   display: inline;
   line-height: 18px;
   font-weight: bold;
-}
-
-.start_bar .start_button .logo {
-  float: left;
-  margin-top: 2px;
-  margin-left: 2px;
 }
 
 .start_bar .big_separator {
