@@ -78,7 +78,7 @@ export const toggleHidden = () => {
 };
 
 export const toggleStart = () => {
-  $(start_button).on("click touchstart", (e) => {
+  $(start_button).on("click", (e) => {
     $(start_button).toggleClass("sb_click");
     $(start_menu).slideToggle();
   });
