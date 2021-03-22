@@ -67,7 +67,7 @@ export const toggleHidden = () => {
     $(window_one).toggleClass("hidden");
   });
 
-  $(explorer_x).bind("touchmove", (e) => {
+  $(explorer).bind("touchmove", (e) => {
     e.preventDefault();
   });
   $(explorer_x).on("click touchstart", () => {
