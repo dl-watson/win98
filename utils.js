@@ -22,6 +22,7 @@ export const elemArray = [
   note_one,
   note_two,
   explorer,
+  contact,
   computer,
   linkedin,
   github,
@@ -50,34 +51,39 @@ export const makeDraggable = (elemArray) => {
 // dragging a note icon immediately opens the note on mobile when dragging stops
 // fixed issue on desktop
 export const toggleHidden = () => {
-  $(window_one_x).on("click touchstart", (e) => {
-    e.preventDefault();
+  $(window_one_x).bind("touchmove", (e) => e.preventDefault());
+  $(window_one_x).on("click", () => {
     $(window_one).toggleClass("hidden");
+    $(window_one).unbind("touchmove");
   });
 
-  $(window_two_x).on("click touchstart", (e) => {
-    e.preventDefault();
-    $(window_two).toggleClass("hidden");
+  $(window_two_x).bind("touchmove", (e) => e.preventDefault());
+  $(window_two_x).on("click", () => {
+    $(window_one).toggleClass("hidden");
+    $(window_two).unbind("touchmove");
   });
 
-  $(explorer_x).on("click touchstart", (e) => {
-    e.preventDefault();
+  $(explorer_x).bind("touchmove", (e) => e.preventDefault());
+  $(explorer_x).on("click", () => {
     $(explorer).toggleClass("hidden");
+    $(explorer).unbind("touchmove");
   });
 
-  $(note_one).on("click touchstart", (e) => {
-    e.preventDefault();
+  $(note_one).bind("touchmove", (e) => e.preventDefault());
+  $(note_one).on("click", () => {
     if ($(window_one).hasClass("hidden")) {
       $(window_one).toggleClass("hidden");
+      $(window_one).unbind("touchmove");
 
       helpCursor();
     }
   });
 
-  $(note_two).on("click touchstart", (e) => {
-    e.preventDefault();
+  $(note_two).bind("touchmove", (e) => e.preventDefault());
+  $(note_two).on("click", () => {
     if ($(window_two).hasClass("hidden")) {
       $(window_two).toggleClass("hidden");
+      $(window_two).unbind("touchmove");
 
       helpCursor();
     }
