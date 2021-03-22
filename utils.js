@@ -127,11 +127,11 @@ export const openPopup = () => {
 // currently not working on mobile
 export const closePopup = () => {
   $(ok).on("click", () => {
-    $(ok).parent().parent().fadeOut();
+    $(explorer).fadeOut();
   });
 
   $(ok).on("touchstart", () => {
-    $(ok).toggleClass("hidden");
+    $(explorer).toggleClass("hidden");
   });
 };
 
