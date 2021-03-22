@@ -36,6 +36,7 @@ a:hover {
   float: left;
   position: fixed;
   left: 0%;
+  top: 2.5%;
   z-index: 2;
 }
 
@@ -285,11 +286,8 @@ div.tags {
 }
 
 .wrapper,
-.descriptionm .middle,
-.rc-scout {
-  display: flex !important;
-}
-
+.description .middle,
+.rc-scout,
 .rc-scout__text {
   display: flex !important;
   flex-direction: column !important;
