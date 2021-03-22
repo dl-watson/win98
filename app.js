@@ -12,6 +12,8 @@ import {
 $(document).ready(() => {
   makeDraggable(elemArray);
 
+  window.setTimeout(scoutLoader, 1000);
+
   window.setTimeout(openPopup, 1000);
   closePopup();
 
@@ -21,8 +23,4 @@ $(document).ready(() => {
 
   window.setInterval(updateClock, 6000);
   updateClock();
-
-  window.setTimeout(scoutLoader, 1000);
-
-  scoutLoader();
 });
