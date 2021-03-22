@@ -285,6 +285,10 @@ div.tags {
   display: flex;
 }
 
+.rc-scout {
+  display: flex !important;
+}
+
 .rc-scout__text {
   display: flex !important;
   flex-direction: column !important;
@@ -339,6 +343,10 @@ div.tags {
 
 .start_bar .start_button {
   float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   border-top: 2px solid white;
   border-left: 2px solid white;
   border-bottom: 2px solid gray;
@@ -346,7 +354,6 @@ div.tags {
   height: 18px;
   width: 54px;
   margin: 2px;
-  text-align: center;
 }
 
 .start_button {
@@ -445,9 +452,9 @@ div.tags {
 
 .ui-loader,
 .ui-icon-loading {
-  display: none;
+  display: none !important;
 }
 
-.ui-mobile-viewport {
-  border: none;
+.ui-overlay-a {
+  border: none !important;
 }
