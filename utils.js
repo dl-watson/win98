@@ -55,7 +55,7 @@ export const toggleHidden = () => {
     e.preventDefault();
     $(window_one).unbind("touchmove");
   });
-  $(window_one_x).on("click touchstart", () => {
+  $(window_one_x).on("click", () => {
     $(window_one).toggleClass("hidden");
   });
 
@@ -63,7 +63,7 @@ export const toggleHidden = () => {
     e.preventDefault();
     $(window_two).unbind("touchmove");
   });
-  $(window_two_x).on("click touchstart", () => {
+  $(window_two_x).on("click", () => {
     $(window_two).toggleClass("hidden");
   });
 
@@ -71,14 +71,14 @@ export const toggleHidden = () => {
     e.preventDefault();
     $(explorer).unbind("touchmove");
   });
-  $(explorer_x).on("click touchstart", () => {
+  $(explorer_x).on("click ", () => {
     $(explorer).toggleClass("hidden");
   });
 
   $(note_one).bind("touchmove", (e) => {
     e.preventDefault();
   });
-  $(note_one).on("click touchstart", () => {
+  $(note_one).on("click", () => {
     if ($(window_one).hasClass("hidden")) {
       $(note_one).unbind("touchmove");
       $(window_one).toggleClass("hidden");
@@ -90,7 +90,7 @@ export const toggleHidden = () => {
   $(note_two).bind("touchmove", (e) => {
     e.preventDefault();
   });
-  $(note_two).on("click touchstart", () => {
+  $(note_two).on("click", () => {
     $(note_two).unbind("touchmove");
     if ($(window_two).hasClass("hidden")) {
       $(window_two).toggleClass("hidden");
