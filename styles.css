@@ -444,5 +444,4 @@ div.tags {
 
 .no_click {
   pointer-events: none;
-  touch-action: none;
 }
