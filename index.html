@@ -49,16 +49,18 @@
         </a>
       </div>
       <div class="description hidden">
-        <div class="x"></div>
-        <div class="top"></div>
-        <div class="middle">
-          <div class="rc-scout"></div>
-          <div class="ok_button"></div>
+        <div class="desc_contents">
+          <div class="x"></div>
+          <div class="top"></div>
+          <div class="middle">
+            <div class="rc-scout"></div>
+            <div class="ok_button"></div>
+          </div>
+          <div class="bottom"></div>
         </div>
-        <div class="bottom"></div>
       </div>
       <div id="desktop" class="container">
-        <div class="window window_one visible">
+        <div class="window window_one">
           <div class="x"></div>
           <div class="top">
             <div class="info">
@@ -67,7 +69,6 @@
           </div>
           <div class="middle">
             <div>
-
               what's up y'all? i'm dee
               <br />
               i write code and have <em>a lot of feelings</em>
@@ -156,18 +157,6 @@
       </div>
     </div>
     <script async defer src="https://www.recurse-scout.com/loader.js?t=ab2f05f8f04bb268178bf66a0cffdfc1"></script>
-    <script>
-      (() => {
-        'use strict';
-        console.log(window._rcs);
-        if (!window._rcs) { return }
-        console.log("window");
-        window.setTimeout(() => console.log(window._rcs), 5000);
-        const link = window._rcs.inst.prefix + "__link";
-          $(link).attr('target', '_blank');
-          $(link).attr('rel', 'noopener noreferrer');
-        })();
-    </script>
     <script type="module" src="./app.js"></script>
   </body>
 </html>

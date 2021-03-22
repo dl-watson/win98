@@ -185,12 +185,10 @@ div.tags {
 
 .icons a {
   text-decoration: none;
-  display: block;
   margin-bottom: 15px;
 }
 
 .title {
-  display: block;
   font-size: 1.25em;
   margin-bottom: 5px;
 }
@@ -289,7 +287,7 @@ div.tags {
   display: flex;
 }
 
-.description .middle,
+.desc_contents .middle,
 .rc-scout .rc-scout__text {
   display: flex !important;
   flex-direction: column !important;

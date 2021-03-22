@@ -35,6 +35,7 @@ const draggableOptions = {
   place: false,
   elementsWithInteraction: elemArray.map((elem) => $(elem)),
   startClass: "no_click",
+  disableSelect: false,
 };
 
 export const helpCursor = () => {
@@ -48,8 +49,6 @@ export const makeDraggable = (elemArray) => {
   return elemArray.map((elem) => $(elem).pep(draggableOptions));
 };
 
-// dragging a note icon immediately opens the note on mobile when dragging stops
-// fixed issue on desktop
 export const toggleHidden = () => {
   $(window_one_x).on("click tap", () => {
     $(window_one).toggleClass("hidden");
@@ -80,14 +79,12 @@ export const toggleHidden = () => {
   });
 };
 
-// currently working on mobile
 export const toggleStart = () => {
   $(start_button).on("click", (e) => {
     $(start_button).toggleClass("sb_click");
     $(start_menu).slideToggle();
   });
 
-  // not an option on mobile, user will need to click the start button again
   $(start_menu).on("mouseleave", () => {
     $(start_button).toggleClass("sb_click");
     $(start_menu).slideToggle();
@@ -99,7 +96,6 @@ export const openPopup = () => {
   $(explorer).toggleClass("hidden");
 };
 
-// currently not working on mobile
 export const closePopup = () => {
   $(ok).on("click tap", () => {
     $(explorer).fadeOut();
