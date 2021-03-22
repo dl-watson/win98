@@ -33,6 +33,7 @@ const draggableOptions = {
   deferPlacement: true,
   place: false,
   elementsWithInteraction: elemArray.map((elem) => $(elem)),
+  startClass: "no_click",
 };
 
 export const helpCursor = () => {
@@ -46,21 +47,21 @@ export const makeDraggable = (elemArray) => {
   return elemArray.map((elem) => $(elem).pep(draggableOptions));
 };
 
-// dragging a note icon immediately opens the note on mobile
+// dragging a note icon immediately opens the note on mobile when dragging stops
 export const toggleHidden = () => {
-  $(window_one_x).on("click touchend", () => {
+  $(window_one_x).on("click touchstart", () => {
     $(window_one).toggleClass("hidden");
   });
 
-  $(window_two_x).on("click touchend", () => {
+  $(window_two_x).on("click touchstart", () => {
     $(window_two).toggleClass("hidden");
   });
 
-  $(explorer_x).on("click touchend", () => {
+  $(explorer_x).on("click touchstart", () => {
     $(explorer).toggleClass("hidden");
   });
 
-  $(note_one).on("click touchend", () => {
+  $(note_one).on("click touchstart", () => {
     if ($(window_one).hasClass("hidden")) {
       $(window_one).toggleClass("hidden");
 
@@ -68,7 +69,7 @@ export const toggleHidden = () => {
     }
   });
 
-  $(note_two).on("click touchend", () => {
+  $(note_two).on("click touchstart", () => {
     if ($(window_two).hasClass("hidden")) {
       $(window_two).toggleClass("hidden");
 

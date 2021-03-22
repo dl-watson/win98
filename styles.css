@@ -441,3 +441,8 @@ div.tags {
 .loading {
   cursor: url("src/w98busy.cur"), help;
 }
+
+.no_click {
+  pointer-events: none;
+  touch-action: none;
+}
