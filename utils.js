@@ -48,19 +48,19 @@ export const makeDraggable = (elemArray) => {
 };
 
 export const toggleHidden = () => {
-  $(window_one_x).click(() => {
+  $(window_one_x).on("click touchstart", () => {
     $(window_one).toggleClass("hidden");
   });
 
-  $(window_two_x).click(() => {
+  $(window_two_x).on("click touchstart", () => {
     $(window_two).toggleClass("hidden");
   });
 
-  $(explorer_x).click(() => {
+  $(explorer_x).on("click touchstart", () => {
     $(explorer).toggleClass("hidden");
   });
 
-  $(note_one).click(() => {
+  $(note_one).on("click touchstart", () => {
     if ($(window_one).hasClass("hidden")) {
       $(window_one).toggleClass("hidden");
 
@@ -78,7 +78,7 @@ export const toggleHidden = () => {
 };
 
 export const toggleStart = () => {
-  $(start_button).click((e) => {
+  $(start_button).on("click touchstart", (e) => {
     $(start_button).toggleClass("sb_click");
     $(start_menu).slideToggle();
   });
@@ -90,7 +90,7 @@ export const toggleStart = () => {
 };
 
 export const closePopup = () => {
-  $(ok).click(() => {
+  $(ok).on("click touchstart", () => {
     $(ok).parent().parent().fadeOut();
   });
 };
