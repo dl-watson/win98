@@ -20,4 +20,8 @@ $(document).ready(() => {
 
   window.setInterval(updateClock, 6000);
   updateClock();
+
+  $(document).on("mobileinit", function () {
+    $.mobile.ignoreContentEnabled = true;
+  });
 });
