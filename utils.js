@@ -128,3 +128,13 @@ export const updateClock = () => {
   const currentTime = hrs + ":" + mins + " " + ext;
   $(clock).html(currentTime);
 };
+
+export const scoutLoader = () => {
+  if (window._rcs) {
+    const link = `.${window._rcs.inst.prefix}__link`;
+    $(link).attr({
+      target: "_blank",
+      rel: "noopener noreferrer",
+    });
+  }
+};

@@ -156,6 +156,18 @@
       </div>
     </div>
     <script async defer src="https://www.recurse-scout.com/loader.js?t=ab2f05f8f04bb268178bf66a0cffdfc1"></script>
+    <script>
+      (() => {
+        'use strict';
+        console.log(window._rcs);
+        if (!window._rcs) { return }
+        console.log("window");
+        window.setTimeout(() => console.log(window._rcs), 5000);
+        const link = window._rcs.inst.prefix + "__link";
+          $(link).attr('target', '_blank');
+          $(link).attr('rel', 'noopener noreferrer');
+        })();
+    </script>
     <script type="module" src="./app.js"></script>
   </body>
 </html>

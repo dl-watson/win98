@@ -1,6 +1,6 @@
 fix:
 
-- fix recurse scout open in new tab?
+- mobile align for scout? wtf?
 
 icons:
 https://win98icons.alexmeub.com/
