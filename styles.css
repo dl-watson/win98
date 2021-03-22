@@ -328,7 +328,6 @@ div.tags {
 .start_menu {
   position: fixed;
   z-index: 3;
-  bottom: 28px;
   display: none;
 }
 

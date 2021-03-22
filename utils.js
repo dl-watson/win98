@@ -53,38 +53,34 @@ export const makeDraggable = (elemArray) => {
 export const toggleHidden = () => {
   $(window_one_x).bind("touchmove", (e) => {
     e.preventDefault();
-    $(window_one).unbind("touchmove");
   });
-
-  $(window_one_x).on("click", () => {
+  $(window_one_x).on("click touchstart", () => {
+    $(window_one).unbind("touchmove");
     $(window_one).toggleClass("hidden");
   });
 
   $(window_two_x).bind("touchmove", (e) => {
     e.preventDefault();
-    $(window_two).unbind("touchmove");
   });
-
-  $(window_two_x).on("click", () => {
+  $(window_two_x).on("click touchstart", () => {
+    $(window_two).unbind("touchmove");
     $(window_one).toggleClass("hidden");
   });
 
   $(explorer_x).bind("touchmove", (e) => {
     e.preventDefault();
-    $(explorer).unbind("touchmove");
   });
-
-  $(explorer_x).on("click", () => {
+  $(explorer_x).on("click touchstart", () => {
+    $(explorer).unbind("touchmove");
     $(explorer).toggleClass("hidden");
   });
 
   $(note_one).bind("touchmove", (e) => {
     e.preventDefault();
-    $(window_one).unbind("touchmove");
   });
-
-  $(note_one).on("click", () => {
+  $(note_one).on("click touchstart", () => {
     if ($(window_one).hasClass("hidden")) {
+      $(window_one).unbind("touchmove");
       $(window_one).toggleClass("hidden");
 
       helpCursor();
@@ -93,10 +89,9 @@ export const toggleHidden = () => {
 
   $(note_two).bind("touchmove", (e) => {
     e.preventDefault();
-    $(window_two).unbind("touchmove");
   });
-
-  $(note_two).on("click", () => {
+  $(note_two).on("click touchstart", () => {
+    $(window_two).unbind("touchmove");
     if ($(window_two).hasClass("hidden")) {
       $(window_two).toggleClass("hidden");
 
