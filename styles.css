@@ -295,6 +295,7 @@ div.tags {
   flex-direction: column !important;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .window .bottom {
