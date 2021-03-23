@@ -4,7 +4,6 @@ const start_menu = ".start_menu";
 const clock = "#showClock";
 const window_one = ".window_one";
 const window_two = ".window_two";
-const window_three = ".window_three";
 const explorer = ".description";
 const note_one = ".note_one";
 const note_two = ".note_two";
@@ -20,7 +19,6 @@ const twitter = ".recycle";
 export const elemArray = [
   window_one,
   window_two,
-  window_three,
   note_one,
   note_two,
   explorer,
@@ -91,6 +89,13 @@ export const toggleStart = () => {
     $(start_button).toggleClass("sb_click");
     $(start_menu).slideToggle();
   });
+};
+
+export const delayNote = () => {
+  if ($(window).width() < 500) {
+    $(note_one).hide();
+    window.setTimeout(() => $(note_one).show(), 1200);
+  }
 };
 
 export const openPopup = () => {
