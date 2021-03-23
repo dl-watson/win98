@@ -91,10 +91,11 @@ export const toggleStart = () => {
   });
 };
 
-export const delayNote = () => {
+export const toggleNote = () => {
   if ($(window).width() < 500) {
-    $(note_one).hide();
-    window.setTimeout(() => $(note_one).show(), 1200);
+    window.setTimeout(() => $(note_one).toggleClass("hidden"), 1200);
+  } else {
+    $(note_one).toggleClass("hidden");
   }
 };
 

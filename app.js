@@ -7,13 +7,13 @@ import {
   elemArray,
   openPopup,
   scoutLoader,
-  delayNote,
+  toggleNote,
 } from "./utils.js";
 
 $(document).ready(() => {
   makeDraggable(elemArray);
 
-  delayNote();
+  toggleNote();
 
   window.setTimeout(scoutLoader, 1000);
 
