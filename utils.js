@@ -4,6 +4,7 @@ const start_menu = ".start_menu";
 const clock = "#showClock";
 const window_one = ".window_one";
 const window_two = ".window_two";
+const window_three = ".window_three";
 const explorer = ".description";
 const note_one = ".note_one";
 const note_two = ".note_two";
@@ -19,6 +20,7 @@ const twitter = ".recycle";
 export const elemArray = [
   window_one,
   window_two,
+  window_three,
   note_one,
   note_two,
   explorer,
