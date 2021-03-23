@@ -93,7 +93,7 @@ export const toggleStart = () => {
 
 export const toggleNote = () => {
   if ($(window).width() < 500) {
-    window.setTimeout(() => $(note_one).toggleClass("hidden"), 1200);
+    window.setTimeout(() => $(note_one).fadeIn().toggleClass("hidden"), 1200);
   } else {
     $(note_one).toggleClass("hidden");
   }

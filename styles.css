@@ -113,6 +113,7 @@ a:hover {
   height: 32px;
   width: 32px;
   background-image: url("src/icons/notepad.png");
+  margin: auto;
 }
 
 .start_bar .start_button .logo {
