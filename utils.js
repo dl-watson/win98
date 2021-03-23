@@ -94,14 +94,11 @@ export const toggleStart = () => {
 export const toggleNote = () => {
   if ($(window).width() < 500) {
     window.setTimeout(() => $(note_one).fadeIn().toggleClass("hidden"), 1200);
-  } else {
-    $(note_one).toggleClass("hidden");
-  }
+  } else $(note_one).toggleClass("hidden");
 };
 
 export const openPopup = () => {
-  $(explorer).fadeIn();
-  $(explorer).toggleClass("hidden");
+  $(explorer).fadeIn().toggleClass("hidden");
 };
 
 export const closePopup = () => {
