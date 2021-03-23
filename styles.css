@@ -458,24 +458,15 @@ div.tags {
 }
 
 @media only screen and (max-width: 500px) {
+  .window_one,
   .window_two,
   .note_one,
   .note_two {
     display: none;
   }
 
-  .window_one {
-    top: 5%;
-    left: 27.5%;
-  }
-
-  .window_one .middle > div {
-    width: 250px;
-    text-overflow: clip;
-  }
-
   .description {
-    top: 50%;
-    right: 10%;
+    top: 20%;
+    right: 15%;
   }
 }
