@@ -1,20 +1,20 @@
-const ok = ".ok_button";
-const start_button = ".start_button";
-const start_menu = ".start_menu";
-const clock = "#showClock";
-const window_one = ".window_one";
-const window_two = ".window_two";
-const explorer = ".description";
-const note_one = ".note_one";
-const note_two = ".note_two";
-const window_one_x = ".window_one .x";
-const window_two_x = ".window_two .x";
-const explorer_x = ".description .x";
-const computer = ".computer";
-const contact = ".contact";
-const linkedin = ".pages";
-const github = ".code";
-const twitter = ".recycle";
+const ok = ".ok_button",
+  start_button = ".start_button",
+  start_menu = ".start_menu",
+  clock = "#showClock",
+  window_one = ".window_one",
+  window_two = ".window_two",
+  explorer = ".description",
+  note_one = ".note_one",
+  note_two = ".note_two",
+  window_one_x = ".window_one .x",
+  window_two_x = ".window_two .x",
+  explorer_x = ".description .x",
+  computer = ".computer",
+  contact = ".contact",
+  linkedin = ".pages",
+  github = ".code",
+  twitter = ".recycle";
 
 export const elemArray = [
   window_one,
@@ -109,9 +109,9 @@ export const closePopup = () => {
 
 export const updateClock = () => {
   const date = new Date();
-  let mins = date.getMinutes();
-  let hrs = date.getHours();
-  let ext = "AM";
+  let mins = date.getMinutes(),
+    hrs = date.getHours(),
+    ext = "AM";
 
   if (hrs >= 12) {
     ext = "PM";
