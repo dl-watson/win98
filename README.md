@@ -1,6 +1,11 @@
-fix:
+### win98_portfolio
 
-- mobile align for scout? wtf?
+hey y'all, and welcome to an exercise in having fun coding
 
-icons:
-https://win98icons.alexmeub.com/
+### about
+
+i built this site using jquery, html and css
+
+with windows 98 icons from [alex meub](https://alexmeub.com/)
+
+and transparent pngs from (to the best of my sleuthing) a now-deactivated tumblr user by the name of @edwrad
