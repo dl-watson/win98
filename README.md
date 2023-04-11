@@ -8,4 +8,4 @@ i built this site using jquery, html and css
 
 with windows 98 icons from [alex meub](https://alexmeub.com/)
 
-and transparent pngs from (to the best of my sleuthing) a now-deactivated tumblr user by the name of @edwrad
+and an assets spritesheet from (to the best of my sleuthing) a now-deactivated tumblr user by the name of @edwrad
